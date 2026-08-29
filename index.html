@@ -373,23 +373,7 @@ function newCreature(seed){
   }, seed||{});
 }
 
-var creatures = [
-  newCreature({name:"Volpe", cr:0, ac:13, hp:2, dpr:1, atk:2, speed:30, burrow:5,
-    senses:{dark:true,keen:true,blind:false,tremor:false,telepatia:false},
-    utility:{cavalcabile:false,trasporto:false,comunicazione:false,abilita:true,unica:false},
-    gestibilita:-2, open:true}),
-  newCreature({name:"Ippogrifo", cr:1, ac:11, hp:19, dpr:18, atk:5, speed:40, fly:60,
-    senses:{dark:false,keen:true,blind:false,tremor:false,telepatia:false},
-    utility:{cavalcabile:true,trasporto:false,comunicazione:false,abilita:false,unica:false},
-    gestibilita:1}),
-  newCreature({name:"Plesiosauro", cr:2, ac:13, hp:68, dpr:14, atk:6, speed:20, swim:40,
-    utility:{cavalcabile:false,trasporto:true,comunicazione:false,abilita:false,unica:true},
-    gestibilita:1}),
-  newCreature({name:"Coccodrillo gigante", cr:5, ac:14, hp:85, dpr:35, atk:8, speed:30, swim:50,
-    control:{presa:true,abbattimento:true,veleno:false,paralisi:false,paura:false,distanza:false,restrained:true,swallow:false},
-    utility:{cavalcabile:false,trasporto:false,comunicazione:false,abilita:true,unica:true},
-    gestibilita:2})
-];
+var creatures = [];
 
 function computeCreature(c){
   var resistMult = resistMultFor(c.resist);
